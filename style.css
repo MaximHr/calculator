@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --background-color : hsl(222, 26%, 31%);
+    --text-color: white;
+    --input-color: hsl(224, 36%, 15%);
+    --keypad-background: hsl(223, 31%, 20%);
+    --red-main: hsl(6, 63%, 50%);
+    --red-shadow: hsl(6, 70%, 34%);
+    --btn-color: hsl(221, 14%, 31%);
+    --btn-background-default: hsl(30, 25%, 89%);
+    --btn-background-shadow-default: hsl(28, 16%, 65%);
+    --btn-purple: hsl(225, 21%, 49%);
+    --btn-purple-shadow: hsl(224, 28%, 35%);
+}
+:root[theme='light'] {
+    --background-color: hsl(0, 0%, 90%);
+    --text-color: hsl(60, 10%, 19%);
+    --input-color: hsl(0, 0%, 93%);
+    --keypad-background: hsl(0, 5%, 81%);
+    --red-main: hsl(25, 98%, 40%);
+    --red-shadow: hsl(25, 99%, 27%);
+    --btn-purple: hsl(185, 42%, 37%);
+    --btn-purple-shadow: hsl(185, 58%, 25%);
+    --btn-color: hsl(60, 10%, 19%);
+    --btn-background-default: hsl(45, 7%, 89%);
+    --btn-background-shadow-default: hsl(35, 11%, 61%);
+}
+
+body {
+    background-color: var(--background-color);
+    transition: all 1s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 700;
+}
+.container {
+    height: 100%;
+    width: 50%;
+}
+h2 {
+    color: var(--text-color);
+    transition: all 1s ease;
+    letter-spacing: 1px;
+}
+.upper-part {
+    display: flex;
+    gap: 10rem;
+    justify-content: space-between;
+}
+.toggle {
+    cursor: pointer;
+    width: 50px;
+    height: 20px;
+    border-radius: 100px;
+    padding-left: 3px;
+    display: flex;
+    align-items: center;
+    background-color: var(--keypad-background);
+    transition: all 1s ease;
+}
+.theme-text {
+    padding-top: 4px;
+    color: var(--text-color);
+    transition: all 1s ease;
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+    padding-right: 10px;
+    text-transform: uppercase;
+}
+.theme-changer {
+    background: none;
+    padding-left: 6px;
+    color: var(--text-color);
+    transition: all 1s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    outline: none;
+}
+.buttons {
+    position: relative;
+    left: -3px;
+}
+.theme {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    align-items: center;
+}
+.circle {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background-color: var(--red-main);
+    transition: all 1s ease;
+    border-radius: 50%;
+}
+.input {
+    /* overflow: hidden;
+    max-width: 460px; */
+    color: var(--text-color);
+    transition: all 1s ease;
+    font-size: 1.3rem;
+    background-color: var(--input-color);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 3rem 0;
+    padding: 1.5rem;
+    padding-right: 1.75rem;
+    border-radius: 15px;
+}
+.input h1 {
+    padding-top: 10px;
+}
+.keyboard {
+    background-color: var(--keypad-background);
+    transition: all 1s ease;
+    border-radius: 15px;
+    padding: 1.5rem;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.big {
+    width: 172px !important;
+}
+.btn {
+    border-radius: 7.5px;
+    margin: 1rem;
+    width: 70px;
+    font-size: 1.5rem;
+    height: 40px;
+    font-weight: 800;
+    color: var(--btn-color);
+    transition: background 1s ease, color 1s ease;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    position: relative;
+}
+.btn:active {
+    box-shadow: none;
+    top: 2px;
+}
+.w { 
+    background-color: var(--btn-background-default);
+    box-shadow: 0 6px var(--btn-background-shadow-default);
+}
+.p {
+    background-color: var(--btn-purple);
+    box-shadow: 0 6px var(--btn-purple-shadow);
+    color: white;
+}
+.r {
+    background-color: var(--red-main);
+    box-shadow: 0 6px var(--red-shadow);
+    color: white;
+}
+.move-right {
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(200%);
+}
+.move-left {
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0%);
+}
