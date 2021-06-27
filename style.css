@@ -174,3 +174,12 @@ h2 {
     transition: transform 0.5s ease-in-out;
     transform: translateX(0%);
 }
+
+@media screen and (max-width: 480px) {
+    body {
+        transform: scale(0.75);
+    }
+    .big {
+        max-width: 169px;
+    }
+}
