@@ -18,9 +18,14 @@ buttons.forEach(btn => {
             }
         } else if(e.target.innerText === 'Reset') {
             reslut.innerHTML = 'Type...';
+
         } else if(e.target.innerText === '='){
             if(reslut.innerHTML !== 'Type...') {
-                const answer = eval(reslut.innerHTML.replaceAll('x', '*'));
+                
+                let answer = eval(reslut.innerHTML.replaceAll('x', '*')).toFixed(10);
+                while(answer[answer.length - 1] == 0) {
+                    answer = answer.slice(0, -1);
+                }
                 reslut.innerHTML = answer;
             }
         } else {
