@@ -37,7 +37,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
+    margin: 5rem 0;
     font-family: 'Spartan', sans-serif;
     font-weight: 700;
 }
