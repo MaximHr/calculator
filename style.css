@@ -178,6 +178,7 @@ h2 {
 
 @media screen and (max-width: 480px) {
     body {
+        margin: 0;
         transform: scale(0.75);
     }
     .big {
